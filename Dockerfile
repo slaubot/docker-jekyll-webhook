@@ -1,4 +1,4 @@
-FROM ubuntu:trusty
+FROM ubuntu:16.04
 MAINTAINER Cameron Moon <cameron@cameronmoon.com>
 
 # Install required software
@@ -16,6 +16,6 @@ COPY * /
 RUN mkdir /source /site && \
     chmod +x /*.sh
 
-EXPOSE 80
+EXPOSE 80, 443
 CMD ["/run.sh"]
 
